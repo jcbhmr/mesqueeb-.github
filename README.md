@@ -7,3 +7,5 @@
 | [My profile](https://github.com/mesqueeb)
 
 </div>
+
+<div align="center"><img src="https://cdn.jsdelivr.net/gh/mesqueeb/.github/sponsorkit/sponsors.svg" /></div>
