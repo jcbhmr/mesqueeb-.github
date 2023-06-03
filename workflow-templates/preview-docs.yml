@@ -30,7 +30,7 @@ jobs:
         with:
           cache: npm
       - run: npm ci
-      - run: npm run build-docs
+      - run: npm run build:docs
       - uses: actions/upload-pages-artifact@v1
         with:
           path: docs/dist
