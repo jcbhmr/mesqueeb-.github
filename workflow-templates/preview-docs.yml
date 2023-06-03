@@ -1,25 +1,25 @@
 name: Preview docs
 on:
   push:
-    branches: [$default-branch]
+    branches: $default-branch
     paths:
       - docs/**
       - "*rc"
-      - "*.config.*"
+      - "*config*"
       - "*.json"
       - "*.lock"
       - .github/workflows/preview-docs.yml
   pull_request:
-    branches: [$default-branch]
+    branches: $default-branch
     paths:
       - docs/**
       - "*rc"
-      - "*.config.*"
+      - "*config*"
       - "*.json"
       - "*.lock"
       - .github/workflows/preview-docs.yml
 concurrency:
-  group: ${{ github.workflow }}
+  group: ${{ github.workflow }}-${{ github.ref_name }}
   cancel-in-progress: true
 jobs:
   preview-docs:
@@ -30,7 +30,7 @@ jobs:
         with:
           cache: npm
       - run: npm ci
-      - run: npm run build:docs
+      - run: npm run build-docs
       - uses: actions/upload-pages-artifact@v1
         with:
           path: docs/dist

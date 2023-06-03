@@ -1,0 +1,7 @@
+{
+  "name": "Publish wiki",
+  "description": "Publishes 'wiki/' to the GitHub wiki",
+  "iconName": "_open-book",
+  "categories": ["Documentation", "Deployment"],
+  "filePatterns": ["wiki"]
+}
